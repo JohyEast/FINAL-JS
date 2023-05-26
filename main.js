@@ -11,7 +11,7 @@ const prestaciones = [
   imagen: "./img/radiologia.svg",
   nombre: "Radiología",
   precio: 3500,
-  categoria: "Diagnostico por imágenes",
+  categoria: "Diagnóstico por imágenes",
  },
  {
   id: "glucometria",
@@ -55,6 +55,9 @@ console.log(prestacionTemplate);
 
 for (let i = 0; i < prestaciones.length; i++) {
  const clone = prestacionTemplate.content.cloneNode(true);
+ clone
+  .querySelector(".prestacion")
+  .setAttribute("data-category", prestaciones[i].categoria);
  clone.querySelector(".prestacion-imagen").src = prestaciones[i].imagen;
  clone.querySelector(".nombre-prestacion").textContent = prestaciones[i].nombre;
  clone.querySelector(
@@ -72,3 +75,22 @@ const navListItems = document.querySelectorAll(".nav-list a");
 for (let i = 0; i < navListItems.length; i++) {
  navListItems[i].onclick = toggleMenu;
 }
+
+const categorySelect = document.getElementById("selector-categorias");
+categorySelect.onchange = function (e) {
+ console.log(e.target.value);
+ const tarjetas = document.querySelectorAll(
+  ".prestaciones-container .prestacion"
+ );
+ console.log(tarjetas);
+ for (let i = 0; i < tarjetas.length; i++) {
+  console.log(tarjetas[i].dataset.category);
+  if (!e.target.value) {
+   tarjetas[i].classList.remove("hidden");
+  } else if (tarjetas[i].dataset.category == e.target.value) {
+   tarjetas[i].classList.remove("hidden");
+  } else {
+   tarjetas[i].classList.add("hidden");
+  }
+ }
+};

@@ -54,9 +54,19 @@
   </div>
   <div id="contrate-prestaciones">
    <h2>Contrate prestaciones</h2>
+   <div class="filtrado">
+    <select name="select" id="selector-categorias">
+     <option value="" selected>Ver Todas</option>
+     <option value="Análisis clínicos">Análisis Clínicos</option>
+     <option value="Diagnóstico por imágenes">Diagnóstico por imágenes</option>
+     <option value="Pruebas cardiológicas">Pruebas cardiológicas</option>
+     <option value="Visita especialidad">Visita especialidad</option>
+     <option value="Servicios farmacéuticos">Servicios farmaceúticos</option>
+    </select>
+   </div>
    <div class="prestaciones-container">
     <template id="template-prestacion">
-     <div class="prestacion">
+     <div class="prestacion" data-category="">
       <img class="prestacion-imagen" src="" alt="">
       <h4 class="nombre-prestacion"></h4>
       <h5 class="precio-prestacion"></h5>
