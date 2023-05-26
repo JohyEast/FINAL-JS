@@ -1,0 +1,129 @@
+* {
+ box-sizing: border-box;
+ padding: 0;
+ margin: 0;
+ list-style: none;
+ color: #abd1c6;
+ font-family: "Pangolin", cursive;
+ font-family: "Poppins", sans-serif;
+ text-decoration: none;
+}
+
+body {
+ background-color: #004643;
+}
+
+header {
+ position: fixed;
+ top: 0;
+ right: 0;
+ left: 0;
+}
+.nav-list {
+ width: 100%;
+
+ height: 3.2rem;
+ display: flex;
+ background-color: #001e1d;
+ padding: 1rem;
+ justify-content: space-around;
+}
+
+.carrito-img {
+ width: 1rem;
+ height: 1rem;
+ fill: #abd1c6;
+}
+
+h1,
+h2 {
+ text-align: center;
+ padding: 5px;
+ margin-top: 3.5rem;
+}
+
+.salud {
+ display: flex;
+ padding: 10px;
+ justify-content: space-around;
+}
+.presentacion {
+ padding: 1rem;
+ margin: 1rem;
+}
+
+.salud-img {
+ width: 40%;
+ height: 40%;
+ border-radius: 10px;
+}
+
+#quienes-somos {
+ margin-top: 3.5rem;
+ padding: 10px;
+}
+
+#contrate-prestaciones {
+ margin-top: 3.5rem;
+ padding: 10px;
+}
+.prestacion {
+ width: 12rem;
+ height: 12rem;
+ border: solid 1px #abd1c6;
+ border-radius: 10px;
+ margin: 1rem;
+ text-align: center;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ padding: 1rem;
+}
+.prestaciones-container {
+ display: flex;
+ flex-wrap: wrap;
+ justify-content: center;
+}
+
+.contacto-conteiner {
+ display: flex;
+ flex-wrap: wrap;
+ justify-content: space-around;
+ align-items: center;
+}
+
+footer {
+ color: #abd1c6;
+ padding: 1rem;
+ text-align: center;
+}
+
+.form-acceso {
+ margin-top: 3.5rem;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ gap: 0.5rem;
+}
+
+button {
+ background-color: #abd1c6;
+ border: none;
+ border-radius: 10px;
+ padding: 0.5rem;
+ color: #004643;
+ font-weight: bold;
+ cursor: pointer;
+}
+
+input {
+ border-radius: 10px;
+ padding: 0.5rem;
+ border: none;
+}
+
+.map-iframe {
+ width: 70%;
+}
