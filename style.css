@@ -86,6 +86,17 @@ h2 {
  justify-content: center;
 }
 
+.filtrado {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+
+select {
+ background-color: #001e1d;
+ color: #abd1c6;
+}
+
 .contacto-conteiner {
  display: flex;
  flex-wrap: wrap;
@@ -126,4 +137,8 @@ input {
 
 .map-iframe {
  width: 70%;
+}
+
+.hidden {
+ display: none;
 }
