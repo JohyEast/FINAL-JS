@@ -63,6 +63,7 @@ console.log(resultado)
 
 const carritoTemplate = document. getElementById("template-carrito");
 const cloneItemCarrito = carritoTemplate.content.cloneNode(true);
+cloneItemCarrito.querySelector()
 
 const prestacionTemplate = document.getElementById("template-prestacion");
 console.log(prestacionTemplate);
