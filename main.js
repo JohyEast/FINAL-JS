@@ -50,6 +50,20 @@ const prestaciones = [
  },
 ];
 
+const prestacionesCarrito = ["laboratorio", "abc"]
+function filtro(prestacion){
+for(let i=0; i<prestacionesCarrito.length; i++){
+    if (prestacion.id === prestacionesCarrito[i]){
+        return true;
+    }
+} return false;
+}
+const resultado= prestaciones.filter(filtro)
+console.log(resultado)
+
+const carritoTemplate = document. getElementById("template-carrito");
+const cloneItemCarrito = carritoTemplate.content.cloneNode(true);
+
 const prestacionTemplate = document.getElementById("template-prestacion");
 console.log(prestacionTemplate);
 
@@ -63,7 +77,10 @@ for (let i = 0; i < prestaciones.length; i++) {
  clone.querySelector(
   ".precio-prestacion"
  ).textContent = `Precio: $ ${prestaciones[i].precio}`;
+clone.querySelector(".prestacion").onclick = function () {
+    console.log(prestaciones[i].id);}
  document.querySelector(".prestaciones-container").appendChild(clone);
+
 }
 
 function toggleMenu() {
@@ -93,4 +110,10 @@ categorySelect.onchange = function (e) {
    tarjetas[i].classList.add("hidden");
   }
  }
+};
+
+let carrito = document.querySelector(".carrito-img");
+let carritoContainer = document.querySelector(".carrito-container");
+carrito.onclick = function () {
+carritoContainer.classList.toggle("hidden");
 };

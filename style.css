@@ -142,3 +142,11 @@ input {
 .hidden {
  display: none;
 }
+
+.carrito-container{
+    position: fixed;
+    z-index: 2;
+    background-color: black;
+    width: 10rem;
+    right: 0;
+}

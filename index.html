@@ -28,11 +28,18 @@
     <li><a href="./pages/registrarse.html">Registrarse</a></li>
     <li><a href="./pages/acceso.html">Acceso</a></li>
     <li><a href="#contacto">Contacto</a></li>
-    <li><a href="."></a><img class="carrito-img" src="./img/shopping_cart_FILL0_wght400_GRAD0_opsz48.svg" alt=""></li>
+    <li><img class="carrito-img" src="./img/shopping_cart_FILL0_wght400_GRAD0_opsz48.svg" alt=""></li>
    </ul>
   </nav>
  </header>
  <main>
+  <aside class="carrito-container hidden">
+    <template id="template-carrito">
+      <h4 class="nombre-prestacion"></h4>
+      <h5 class="precio-prestacion"></h5>
+      <button>Eliminar</button>
+    </template>
+  </aside>
   <h1>Prestaciones de Salud a Domicilio</h1>
   <div class="salud">
    <img class="salud-img" src="./img/imagensalud.webp" alt="">
@@ -83,12 +90,11 @@
      style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
    </div>
   </div>
+
  </main>
  <footer><a href="mailto: johysolutions@gmail.com">Johy Solutions</a>
  </footer>
- <template>
-  fggfhjhj
- </template>
+ 
  <script src="./main.js"></script>
 </body>
 
