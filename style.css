@@ -79,6 +79,7 @@ h2 {
  justify-content: center;
  align-items: center;
  padding: 1rem;
+ cursor: pointer;
 }
 .prestaciones-container {
  display: flex;
@@ -147,6 +148,23 @@ input {
     position: fixed;
     z-index: 2;
     background-color: black;
-    width: 10rem;
+    width: 15rem;
     right: 0;
+}
+
+.item-carrito{
+    display: flex;
+    height: 3rem;
+    justify-content: space-between;
+    border: #001e1d solid 1px;
+    border-radius: 5px;
+    align-items: center;
+    padding: 0.5rem;
+    margin: 0.5rem;
+}
+.boton-carrito{
+    height: 1.5rem;
+    width: 1.5rem;
+    text-align: center;
+    padding: 0px;
 }

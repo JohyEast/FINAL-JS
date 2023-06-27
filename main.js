@@ -50,7 +50,8 @@ const prestaciones = [
  },
 ];
 
-const prestacionesCarrito = ["laboratorio", "abc"]
+const prestacionesCarrito = []
+
 function filtro(prestacion){
 for(let i=0; i<prestacionesCarrito.length; i++){
     if (prestacion.id === prestacionesCarrito[i]){
@@ -58,12 +59,17 @@ for(let i=0; i<prestacionesCarrito.length; i++){
     }
 } return false;
 }
-const resultado= prestaciones.filter(filtro)
-console.log(resultado)
+const itemsActualesCarrito= prestaciones.filter(filtro)
+console.log(itemsActualesCarrito);
 
 const carritoTemplate = document. getElementById("template-carrito");
-const cloneItemCarrito = carritoTemplate.content.cloneNode(true);
-cloneItemCarrito.querySelector()
+for (let i=0; i<itemsActualesCarrito.length; i++){
+    const cloneItemCarrito = carritoTemplate.content.cloneNode(true);
+cloneItemCarrito.querySelector(".nombre-prestacion").textContent= itemsActualesCarrito[i].nombre;
+cloneItemCarrito.querySelector(".precio-prestacion").textContent= itemsActualesCarrito[i].precio;
+document.querySelector(".carrito-container").appendChild(cloneItemCarrito);
+}
+
 
 const prestacionTemplate = document.getElementById("template-prestacion");
 console.log(prestacionTemplate);
@@ -79,7 +85,8 @@ for (let i = 0; i < prestaciones.length; i++) {
   ".precio-prestacion"
  ).textContent = `Precio: $ ${prestaciones[i].precio}`;
 clone.querySelector(".prestacion").onclick = function () {
-    console.log(prestaciones[i].id);}
+    prestacionesCarrito.push(prestaciones[i].id);
+}
  document.querySelector(".prestaciones-container").appendChild(clone);
 
 }
@@ -116,5 +123,6 @@ categorySelect.onchange = function (e) {
 let carrito = document.querySelector(".carrito-img");
 let carritoContainer = document.querySelector(".carrito-container");
 carrito.onclick = function () {
+    console.log("hola");
 carritoContainer.classList.toggle("hidden");
 };
